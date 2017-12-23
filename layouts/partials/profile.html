@@ -1,0 +1,21 @@
+<section class="hero is-fullheight hero-navbar-fixed-top">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <figure>
+        <img src="{{ .Site.Params.profilePath | relURL }}" alt="" style="border-radius: 50%" />
+      </figure>
+      <div class="is-divider" data-content="×"></div>
+      <p class="title">{{ .Title }}</p>
+      <p class="subtitle is-6 has-text-grey-light">{{ .Site.Params.description }}</p>
+    </div>
+  </div>
+  <div class="hero-foot profile-padding columns">
+    <div class="container has-text-centered column is-half">
+      {{ range $key, $val := .Site.Social }}
+        {{ with . }}
+          <a href="{{ $val }}" target=_blank><span class="icon"><i class="fa fa-{{ $key }}"></i></span></a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>

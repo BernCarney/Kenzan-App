@@ -1,0 +1,21 @@
+# Basic Setup Variables
+baseURL: "/"
+languageCode: en
+title: "Bern Carney"
+MetaDataFormat: yaml
+
+params:
+  description: "Supporting material for Kenzan"
+  profilePath: "img/faded.jpg"
+  errorPath: "img/faded.jpg"
+
+social:
+  # site: "profile URL you want to link to"
+  btc: "bitcoin:1Pi7XNDs5neGjPVnnszWpQ2kHUD2TRpTJh"
+  codepen: "https://codepen.io/Bern_"
+  facebook: "https://www.facebook.com/bern.carney"
+  github: "https://github.com/BernCarney"
+  instagram: "https://www.instagram.com/bern.carney"
+  linkedin: "https://www.linkedin.com/in/berncarney"
+  spotify: "https://open.spotify.com/user/bernjc3"
+  twitter: "https://twitter.com/BCarney_"

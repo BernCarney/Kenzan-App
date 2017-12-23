@@ -1,0 +1,73 @@
+// 1. Import Variables
+@import "./utilities/initial-variables"
+@import "./utilities/functions"
+
+// 2. Customize Variables
+// General Padding
+$content-pre-padding: .75em .5em !default
+$section-padding: 3rem .75rem !default
+
+// Navigation
+$navbar-height: 2.25rem !default
+
+// Border Radius change
+$message-body-radius: 0 !default
+
+// Links
+$link: $red !default
+$red-invert: findColorInvert($red) !default
+$link-invert: $red-invert !default
+$link-visited: $orange !default
+
+// 3. Import the rest of Bulma
+@import "bulma"
+
+// 4. Customize
+.navbar-burger
+  height: auto
+  span
+    height: 2px
+  &:hover
+    span
+      background-color: $red
+  // Modifers
+  &.is-active
+    span
+      background-color: $red
+
+.navbar
+  border-bottom: 1px solid $grey-lighter
+
+pre
+  +overflow-touch
+  padding: 1.25rem .5rem
+
+a
+  span
+    color: $dark
+    &:hover
+      color: $danger
+
+.hero-navbar-fixed-top
+  padding-bottom: 20%
+
+.profile-padding
+  padding: 0 3rem
+
+.error-padding
+  padding: 0 6rem
+
+.content
+  pre
+    padding: .5em .5em 0
+
+.is-img
+  background-image: url("../img/meBanner.jpg")
+  background-position: center
+  background-size: cover
+
+.hero.is-img
+  min-height: 35vh
+
+.hero.is-fullheight
+    min-height: 96vh

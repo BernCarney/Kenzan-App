@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+  <link rel="stylesheet" href="{{ " css/main.css " | relURL }}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="http://via.placeholder.com/16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="http://via.placeholder.com/32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="http://via.placeholder.com/96x96.png" sizes="96x96">
+  <!-- Apple Touch Icon (at least 200x200px) -->
+  <link rel="apple-touch-icon" href="http://via.placeholder.com/200x200.png">
+  <!-- To run web application in full-screen -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <!-- Status Bar Style (see Supported Meta Tags below for available values) -->
+  <!-- Has no effect unless you have the previous meta tag -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ template "_internal/opengraph.html" . }}
+  {{ template "_internal/schema.html" . }}
+  {{ template "_internal/google_news.html" . }}
+  <title>{{ $.Site.Title }}</title>
+</head>
+
+<body>
+
+  <section class="hero is-fullheight hero-navbar-fixed-top">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <figure>
+          <img src="{{ .Site.Params.errorPath | relURL }}" alt="" style="border-radius: 50%" />
+        </figure>
+        <div class="is-divider" data-content="×"></div>
+        <p class="title">Aw Nuts!</p>
+        <p class="is-6 has-text-grey-light">It looks like you're in the wrong place.</p>
+        <p class="is-6 has-text-grey-light">Let's go
+          <a href="{{ $.Site.BaseURL }}" class="is-uppercase is-size-6 has-text-weight-semibold">home</a>.</p>
+      </div>
+    </div>
+    <div class="hero-foot profile-padding">
+      <div class="container has-text-centered">
+        {{ range $key, $val := .Site.Social }}
+          {{ with . }}
+            <a href="{{ $val }}" target=_blank>
+              <span class="icon">
+                <i class="fa fa-{{ $key }}"></i>
+              </span>
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- {{/* Footer */}} -->
+  <footer class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container">
+        <div class="content has-text-centered">
+          <small>&copy; 2015 - {{ now.Format "2006" }} Copyright Bernard Carney.
+            <p>All rights reserved. Powered by
+              <a href="//gohugo.io" target="_blank" class="has-text-danger">Hugo</a> and hosted by
+              <a href="https://www.netlify.com/" target="_blank" class="has-text-danger">Netlify</a>. You can view the source code on
+              <a href="https://github.com/BernCarney/BernCarney.github.io/tree/v2.0"
+                target="_blank" class="has-text-danger">Github</a>.</p>
+          </small>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src={{ "js/navtoggle.js" | relURL }}></script>
+</body>
+
+</html>
