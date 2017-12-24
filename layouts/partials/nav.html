@@ -5,7 +5,7 @@
     <a href="/" class="navbar-item is-uppercase has-text-weight-semibold">{{ .Title }}</a>
     <div class="navbar-end">
       {{ range $key, $val := .Site.Social }}
-        {{ range first 2 where $val ne "" }}
+        {{ with . }}
           <a href="{{ $val }}" target=_blank><span class="icon"><i class="fa fa-{{ $key }}"></i></span></a>
         {{ end }}
       {{ end }}
