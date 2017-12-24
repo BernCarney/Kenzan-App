@@ -3,7 +3,7 @@ title: About Me
 type: about
 date: 2017-11-01
 ---
-My name is Bern Carney, short for _Bernard Carney_.
+My name is Bern Carney, short for _Bernard_.
 
 How things work, and how I can make them work better, is what interests me. Ever since I designed my first website and put together my first computer when I was young, I have been passionate about technology. For the past 8 years I have been expanding that skill-set professionally.
 

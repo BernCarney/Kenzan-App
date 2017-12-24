@@ -1,21 +1,9 @@
 {{/* Hero Image Banner */}}
-<section class="hero is-img is-hidden-tablet"></section>
+<section class="hero is-img is-hidden-tablet" id="topPg"></section>
 <section class="hero is-fullheight is-img is-hidden-mobile"></section>
 
-<section class="section">
-	<div class="content">
-		{{ partial "about.html" . }}
-	</div>
-</section>
+{{ partial "about.html" . }}
 
-<section class="section">
-	<div class="content">
-		{{ partial "resume.html" . }}
-	</div>
-</section>
+{{ partial "resume.html" . }}
 
-<section class="section">
-	<div class="content">
-		{{ partial "contact.html" . }}
-	</div>
-</section>
+{{ partial "contact.html" . }}

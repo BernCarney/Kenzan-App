@@ -1,8 +1,14 @@
-<h1 class="title is-2 has-text-centered">ABOUT</h1>
-<section class="section" id="about">
-<div class="container">
-{{ range where $.Data.Pages "Type" "about"}}
-  {{ .Content }}
-{{ end }}
+<div class="hero is-light is-small" id="about">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-4 has-text-centered has-text-weight-light is-uppercase">About Me</h1>
+    </div>
+  </div>
 </div>
+<section class="section">
+  <div class="content">
+    {{ range where $.Data.Pages "Type" "about"}}
+      {{ .Content }}
+    {{ end }}
+  </div>
 </section>
