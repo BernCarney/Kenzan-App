@@ -1,7 +1,9 @@
+    <h1 class="title is-2 has-text-centered">RESUME</h1>
+    
     <!-- Main -->
-    <div id="main">
+    <div id="resume">
       <article class="post">
-        <!-- IDEA: Consider folding each main section with jQuery or something -->
+
         <!-- Personal -->
         <div class="flex-full">
           <div>
@@ -14,16 +16,6 @@
           <h4>{{ $.Site.Data.resume.personal.location.hometown }}</h4>
           </div>
         </div>
-
-        <!-- TODO: Figure out a better way to display this info -->
-        {{/*
-        <h3>Clearances:</h3><h4>PSI: {{ $.Site.Data.resume.personal.clearance.psi }}</h4>
-        <ul>
-          {{ range $.Site.Data.resume.personal.clearance.current }}
-            <li>{{ . }}</li>
-          {{ end }}
-        </ul>
-        */}}
 
         <!-- Skills -->
         <h2 class="align-center box full">Skills</h2>

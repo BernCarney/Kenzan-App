@@ -1,3 +1,8 @@
+<h1 class="title is-2 has-text-centered">ABOUT</h1>
+<section class="section" id="about">
+<div class="container">
 {{ range where $.Data.Pages "Type" "about"}}
   {{ .Content }}
 {{ end }}
+</div>
+</section>
