@@ -48,34 +48,40 @@
 </div>
 
 <section class="section">
+  <div class="tabs is-small is-centered is-fullwidth is-boxed">
+    <ul>
+      <li class="is-active"><a>Full Time</a></li>
+      <li><a>Part Time</a></li>
+    </ul>
+  </div>
+
+  <!-- Job Item Loop -->
+  {{ range $.Site.Data.resume.experience.fulltime }}
   <div class="container">
-    <h2 class="title is-4">Full-Time Positions</h2>
-    {{ range $.Site.Data.resume.experience.fulltime }}
-      <div class="card" style="margin-bottom: 15px">
-        <header class="card-header">
-          <h3 class="card-header-title">{{ .position }}, {{ .company }}</h3>
-        </header>
-        <div class="card-content">
-          <div class="content is-size-6">
-            <span class="">{{ .dates }}&nbsp;&nbsp;&nbsp;
-              <i class="fa fa-building-o" aria-hidden="true"></i> {{ .location }}</span>
-            <p>{{ .summary }}</p>
-            <ul>
-              {{ range $duty := .duties }}
-              <li>{{ $duty }}</li>
-              {{ end }}
-            </ul>
-          </div>
-        </div>
-      </div>
-    {{ end }} 
+    <header class="header">
+      <h3 class="title is-5">{{ .position }}</h3>
+      <h4 class="subtitle is-6 has-text-weight-light">{{ .dates }}
+      <p>{{ .company }}<span class="pull-right"><i class="fa fa-building-o" aria-hidden="true"></i> {{ .location }}</span></p></h4>
+    </header>
+  </div>
+  <div class="container">
+    <div class="content">
+      <p>{{ .summary }}</p>
+      <ul>
+        {{ range $duty := .duties }}
+          <li>{{ $duty }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  {{ end }} 
+  <!-- End Job Item Loop -->
 
     <h2 class="">Part-Time Positions</h2>
       {{ range $.Site.Data.resume.experience.parttime }}
         <h3>{{ .company }}</h3>
         <p class="">{{ .position }}</p>
       {{ end }}
-  </div>
 </section>
 
 <!-- Volunteer -->
