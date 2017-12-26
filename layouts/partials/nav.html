@@ -3,13 +3,8 @@
   <!-- nabar-brand, navbar-burger -->
   <div class="navbar-brand">
     <a href="/" class="navbar-item is-uppercase has-text-weight-semibold">{{ .Title }}</a>
-    <div class="navbar-end">
-      {{ range $key, $val := .Site.Social }}
-        {{ with . }}
-          <a href="{{ $val }}" target=_blank><span class="icon"><i class="fa fa-{{ $key }}"></i></span></a>
-        {{ end }}
-      {{ end }}
-    </div>
+    <a href="" target=_blank class="navbar-item is-hidden-desktop"><span><i class="fa fa-github"></i></span></a>
+    <a href="" target=_blank class="navbar-item is-hidden-desktop"><span><i class="fa fa-linkedin"></i></span></a>
     <div class="navbar-burger burger" data-target="navMenu">
       <span></span>
       <span></span>
