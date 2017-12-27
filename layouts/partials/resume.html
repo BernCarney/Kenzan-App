@@ -61,19 +61,23 @@
     <header class="header">
       <h3 class="title is-5">{{ .position }}</h3>
       <h4 class="subtitle is-6 has-text-weight-light">{{ .dates }}
-      <p>{{ .company }}<span class="pull-right"><i class="fa fa-building-o" aria-hidden="true"></i> {{ .location }}</span></p></h4>
+        <p>{{ .company }}</p>
+        <p class="has-text-success has-text-weight-semibold"><i class="fa fa-building-o" aria-hidden="true"></i> {{ .location }}</p>
+      </h4>
     </header>
+    <br>
   </div>
   <div class="container">
     <div class="content">
       <p>{{ .summary }}</p>
-      <ul>
+      <ul style="margin-left:1rem" class="">
         {{ range $duty := .duties }}
           <li>{{ $duty }}</li>
         {{ end }}
       </ul>
     </div>
   </div>
+  <div class="is-divider" data-content=""></div>
   {{ end }} 
   <!-- End Job Item Loop -->
 
