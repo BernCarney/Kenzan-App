@@ -13,17 +13,16 @@
       <div class="column is-half has-text-centered">
         <h2 class="title is-6">Current Location</h2>
         <h3 class="subtitle is-7">{{ $.Site.Data.resume.personal.location.current }}</h3>
-      </div>  
+      </div>
       <div class="column has-text-centered">
         <h2 class="title is-6">Hometown</h2>
         <h3 class="subtitle is-7">{{ $.Site.Data.resume.personal.location.hometown }}</h3>
       </div>
     </div>
     <hr>
+
     <div class="content">
-      {{ range where $.Data.Pages "Type" "about"}}
-        {{ .Content }}
-      {{ end }}
+      {{ range where $.Data.Pages "Type" "about"}} {{ .Content }} {{ end }}
     </div>
   </div>
 </section>

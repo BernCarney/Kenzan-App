@@ -8,31 +8,31 @@
 
 <!-- Skills -->
 <section class="section">
-  <div class="container">
+  <div class="container is-desktop">
     <div class="tags is-centered">
       {{ range $.Site.Data.resume.skills.hardskills }}
-        <span class="tag is-link">{{ .skill }}</span>
+      <span class="tag is-link">{{ .skill }}</span>
       {{ end }}
     </div>
 
-<!-- Languages -->
+    <!-- Languages -->
     <div class="tags is-centered">
       {{ range $.Site.Data.resume.skills.languages }}
-        <span class="tag is-info">{{ .language }}</span>
+      <span class="tag is-info">{{ .language }}</span>
       {{ end }}
     </div>
 
-<!-- Software -->
+    <!-- Software -->
     <div class="tags is-centered">
       {{ range $.Site.Data.resume.skills.software }}
-        <span class="tag is-warning">{{ . }}</span>
+      <span class="tag is-warning">{{ . }}</span>
       {{ end }}
     </div>
 
-<!-- Soft Skills -->
+    <!-- Soft Skills -->
     <div class="tags is-centered">
       {{ range $.Site.Data.resume.skills.softskills }}
-        <span class="tag is-success">{{ . }}</span>
+      <span class="tag is-success">{{ . }}</span>
       {{ end }}
     </div>
   </div>
@@ -50,28 +50,31 @@
 <section class="section">
   <!-- Job Item Loop -->
   {{ range $.Site.Data.resume.experience.fulltime }}
-  <div class="container">
+  <div class="container is-desktop">
     <header class="header">
       <h3 class="title is-5">{{ .position }}</h3>
       <h4 class="subtitle is-6 has-text-weight-light">{{ .dates }}
         <p>{{ .company }}</p>
-        <p class="has-text-dark has-text-weight-semibold"><i class="fa fa-building-o" aria-hidden="true"></i><span class="fancy-head"> {{ .location }}</span></p>
+        <p class="has-text-dark has-text-weight-semibold">
+          <i class="fa fa-building-o" aria-hidden="true"></i>
+          <span class="fancy-head"> {{ .location }}</span>
+        </p>
       </h4>
     </header>
     <br>
   </div>
-  <div class="container">
+  <div class="container is-desktop">
     <div class="content">
       <p>{{ .summary }}</p>
       <ul style="margin-left:1rem">
         {{ range $duty := .duties }}
-          <li>{{ $duty }}</li>
+        <li>{{ $duty }}</li>
         {{ end }}
       </ul>
     </div>
   </div>
   <div class="is-divider" data-content="§"></div>
-  {{ end }} 
+  {{ end }}
   <!-- End Job Item Loop -->
 
   <!-- Start Part Time Item Loop -->
@@ -80,101 +83,92 @@
       <h2 class="title is-5 has-text-grey has-text-weight-light">Part Time Positions</h2>
     </div>
     {{ range $.Site.Data.resume.experience.parttime }}
-      <div class="column is-6-mobile has-text-centered">
-        <h3 class="title is-5">{{ .company }}</h3>
-        <h4 class="subtitle is-6 has-text-weight-light">{{ .position }}</h4>
-      </div>
+    <div class="column is-6-mobile has-text-centered">
+      <h3 class="title is-5">{{ .company }}</h3>
+      <h4 class="subtitle is-6 has-text-weight-light">{{ .position }}</h4>
+    </div>
     {{ end }}
     <!-- End Part Time Item Loop -->
   </div>
   <div class="is-divider" data-content="§"></div>
 
-<!-- Volunteer -->
+  <!-- Volunteer -->
   <div class=" columns is-mobile is-multiline is-centered">
     <div class="column is-12 has-text-centered">
       <h2 class="title is-5 has-text-grey has-text-weight-light">Volunteer Positions</h2>
     </div>
     {{ range $.Site.Data.resume.volunteer.positions }}
-      <div class="column is-6-mobile has-text-centered">
-        <h3 class="title is-5">{{ .place }}</h3>
-        <h4 class="subtitle is-6 has-text-weight-light">{{ .date }}</h4>
-      </div>
+    <div class="column is-6-mobile has-text-centered">
+      <h3 class="title is-5">{{ .place }}</h3>
+      <h4 class="subtitle is-6 has-text-weight-light">{{ .date }}</h4>
+    </div>
     {{ end }}
   </div>
   <div class="is-divider" data-content="§"></div>
 
-<!-- projects -->
-  <div class="container">
+  <!-- projects -->
+  <div class="container is-desktop">
     <h2 class="title is-5 has-text-grey has-text-weight-light has-text-centered">Personal Projects</h2>
-    <br>
-  </div>
-  {{ range $.Site.Data.resume.projects.personal }}
+    <br> {{ range $.Site.Data.resume.projects.personal }}
     <div class="content">
       <h4>{{ .name }}</h4>
       <p>{{ .description }}</p>
     </div>
-  {{ end }}
-  <div class="is-divider" data-content="§"></div>
-
-<!-- Hobbies -->
-  <div class="columns is-mobile is-multiline is-centered">
-    <div class="column is-12 has-text-centered">
-      <h2 class="title is-5 has-text-grey has-text-weight-light">Hobbies</h2>
-    </div>
-
-    <div class="column is-6-mobile has-text-centered">
-      <h4 class="is-6 has-text-weight-semibold"><span class="fancy-head">Outdoors</span></h4>
-      <ul>
-        {{ range $.Site.Data.resume.hobbies.outdoors }}
-        <li>{{ . }}</li>
-        {{ end }}
-      </ul>
-    </div>
-
-    <div class="column is-6-mobile has-text-centered">
-      <h4 class="is-6 has-text-weight-semibold"><span class="fancy-head">Indoors</span></h4>
-      <ul>
-        {{ range $.Site.Data.resume.hobbies.indoors }}
-        <li>{{ . }}</li>
-        {{ end }}
-      </ul>
-    </div>
-
-    <div class="column is-6-mobile has-text-centered">
-      <h4 class="is-6 has-text-weight-semibold"><span class="fancy-head">Social</span><h4>
-      <ul>
-        {{ range $.Site.Data.resume.hobbies.social }}
-        <li>{{ . }}</li>
-        {{ end }}
-      </ul>
-    </div>
-
-    <div class="column is-6-mobile has-text-centered">
-      <h4 class="is-6 has-text-weight-semibold"><span class="fancy-head">Skill Builders</span></h4>
-      <ul>
-        {{ range $.Site.Data.resume.hobbies.skillbuilders }}
-        <li>{{ . }}</li>
-        {{ end }}
-      </ul>
-    </div>
-
+    {{ end }}
   </div>
   <div class="is-divider" data-content="§"></div>
 
-<!-- Education -->
-      <div class="columns is-mobile is-multiline is-centered">
-    <div class="column is-12 has-text-centered">
-      <h2 class="title is-5 has-text-grey has-text-weight-light">Education</h2>
-    </div>
+  <!-- Education -->
+  <div class="container">
+    <div class="columns is-mobile is-multiline is-centered">
+      <div class="column is-12 has-text-centered">
+        <h2 class="title is-5 has-text-grey has-text-weight-light">Education</h2>
+      </div>
 
-    {{ range $.Site.Data.resume.education.schools }}
+      {{ range $.Site.Data.resume.education.schools }}
       <div class="column">
         <h3 class="title is-5">{{ .school }}</h3>
         <h4 class="subtitle is-6 has-text-weight-light">{{ .dates }}
           <p>{{ .degree }}</p>
-          <p class="has-text-dark has-text-weight-semibold"><i class="fa fa-building-o" aria-hidden="true"></i><span class="fancy-head"> {{ .location }}</span></p>
+          <p class="has-text-dark has-text-weight-semibold">
+            <i class="fa fa-building-o" aria-hidden="true"></i>
+            <span class="fancy-head"> {{ .location }}</span>
+          </p>
         </h4>
       </div>
-    {{ end }}
+      {{ end }}
+    </div>
+  </div>
+  <div class="is-divider" data-content="§"></div>
+
+  <!-- Hobbies -->
+  <div class="container">
+    <div class="columns is-mobile is-multiline is-centered">
+      <div class="column is-12 has-text-centered">
+        <h2 class="title is-5 has-text-grey has-text-weight-light">Hobbies</h2>
+      </div>
+
+      <div class="column is-6-mobile has-text-centered">
+        <h4 class="is-6 has-text-weight-semibold">
+          <span class="fancy-head">Outdoors</span>
+        </h4>
+        <ul>
+          {{ range $.Site.Data.resume.hobbies.outdoors }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <div class="column is-6-mobile has-text-centered">
+        <h4 class="is-6 has-text-weight-semibold">
+          <span class="fancy-head">Indoors</span>
+        </h4>
+        <ul>
+          {{ range $.Site.Data.resume.hobbies.indoors }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
