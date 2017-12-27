@@ -77,15 +77,21 @@
       </ul>
     </div>
   </div>
-  <div class="is-divider" data-content=""></div>
+  <div class="is-divider" data-content="§"></div>
   {{ end }} 
   <!-- End Job Item Loop -->
 
-    <h2 class="">Part-Time Positions</h2>
-      {{ range $.Site.Data.resume.experience.parttime }}
-        <h3>{{ .company }}</h3>
-        <p class="">{{ .position }}</p>
-      {{ end }}
+  <!-- Start Part Time Item Loop -->
+  <div class="container columns is-mobile is-multiline is-centered">
+    {{ range $.Site.Data.resume.experience.parttime }}
+      <div class="column is-6-mobile has-text-centered">
+        <h3 class="title is-5">{{ .company }}</h3>
+        <h4 class="subtitle is-6 has-text-weight-light">{{ .position }}</h4>
+      </div>
+    {{ end }}
+    <!-- End Part Time Item Loop -->
+  </div>
+  <div class="is-divider" data-content="§"></div>
 </section>
 
 <!-- Volunteer -->
