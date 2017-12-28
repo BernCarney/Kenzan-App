@@ -11,6 +11,6 @@ While I would not be part of the 26% that cooks for the office (unless people wo
 
 I grew up in Staten Island, New York with two older sisters. 18 years later , after making it out alive , I attended Virginia Tech as a Computer Science major. After a year of late nights debugging code and figuring out how to solve interesting problems, I realized that my skillset and personality were best utilized somewhere else. I graduated with a B.S. in Business and a focus in technology and entrepreneurship where I felt my communication skills and technology know-how could be put to better use.
 
-Working with the Department of Defense and the Department of Justice in the D.C. area is, oddly enough, where my obsession for climbing began. With a spirit for adventure and possibly due to watching _Into the Wild_ one too many times, I packed up my life and moved to Colorado to follow my passion for climbing. That was almost 7 years ago and was one of the best decisions I've ever made.
+Working with the Department of Defense and the Department of Justice in the D.C. area, is oddly enough, where my obsession for climbing began. With a spirit for adventure and possibly due to watching _Into the Wild_ one too many times, I packed up my life and moved to Colorado to follow my passion for climbing. That was almost 7 years ago and was one of the best decisions I've ever made.
 
 That's a quick recap of who I am and how I've gotten here. Below you can find more about my skill set as well as professional experience and personal projects.
